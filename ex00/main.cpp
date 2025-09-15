@@ -34,5 +34,6 @@ int main( void )
 	std::cout << "g = " << g << ", h = " << h << std::endl;
 	std::cout << "min(g, h) = " << ::min(g, h) << std::endl;
 	std::cout << "max(g, h) = " << ::max(g, h) << std::endl;
+	std::cout << "-----------------------------------" << std::endl;
 	return 0;
 }
