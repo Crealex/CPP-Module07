@@ -1,5 +1,5 @@
 
-#include "wathever.hpp"
+#include "whatever.hpp"
 
 int main( void )
 {
@@ -34,11 +34,5 @@ int main( void )
 	std::cout << "g = " << g << ", h = " << h << std::endl;
 	std::cout << "min(g, h) = " << ::min(g, h) << std::endl;
 	std::cout << "max(g, h) = " << ::max(g, h) << std::endl;
-	int same1 = 5;
-	int same2 = 5;
-	std::cout << "same1 = " << same1 << " adress: " << same2 = " << same2 << std::endl;
-	std::cout << "min(same1, same2) = " << ::min(same1, same2) << std::endl;
-	std::cout << "max(same1, same2) = " << ::max(same1, same2) << std::endl;
-
 	return 0;
 }
