@@ -6,7 +6,7 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 14:18:49 by atomasi           #+#    #+#             */
-/*   Updated: 2025/09/16 10:56:30 by atomasi          ###   ########.fr       */
+/*   Updated: 2025/09/17 10:09:52 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void iter(T *tab, size_t length, void (*f)(T&))
 template<typename T>
 void increment(T &elem)
 {
-	elem += 1;
+	elem++;
 }
 
 template<typename T>
