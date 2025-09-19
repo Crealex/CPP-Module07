@@ -49,12 +49,38 @@ Array<T>::~Array()
 template<typename T>
 Array<T> &Array<T>::operator=(const Array &rhs) // a faire
 {
+	delete this->content;
+	this->_content = new T[rhs._size]();
+	for (int i = 0; i < rhs._size; i++)
+	{
+		this->_content[i] = rhs._content[i];
+	}
 	std::cout << LIGHT_BLUE << "Array assignment operator called" << RESET << std::endl;
+	return (*this);
 }
 
 template<typename T>
-Array<T> &Array<T>::operator[](const Array &rhs)
+T &Array<T>::operator[](std::size_t idx)
 {
+	if (idx < 0 || idx > this->_size)
+		throw std::exception();
 	std::cout << LIGHT_GREEN << "Array [] operator called" << RESET << std::endl;
+	return (this->_content[idx]);
 }
 
+template<typename T>
+const T &Array<T>::operator[](std::size_t idx)
+{
+	if (idx < 0 || idx > this->_size)
+		throw std::exception();
+	std::cout << LIGHT_GREEN << "Array [] operator called" << RESET << std::endl;
+	return (this->_content[idx]);
+}
+
+// *** MEMBER FUNCTIONS ***
+
+template<typename T>
+unsigned int Array<T>::size() const
+{
+	return (this->_size);
+}
